@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameEngine : MonoBehaviour
 {
 
-    public GameObject tree;
+    public GameObject bottomTree;
+    public GameObject upperTree;
     public GameObject bird;
     public float treeHole;
 
@@ -21,12 +22,12 @@ public class GameEngine : MonoBehaviour
     {
         float randomPos = 4f - (4f - 0.8f - treeHole) * Random.value;
 
-        GameObject upperTree = Instantiate(tree);
+        GameObject upperTree = Instantiate(bottomTree);
 
         upperTree.transform.position = new Vector2(4f, randomPos);
 
-        GameObject lowerTree = Instantiate(tree);
+        GameObject lowerTree = Instantiate(upperTree);
 
-        lowerTree.transform.position = new Vector2(4f, randomPos - treeHole - 4.8f);
+        lowerTree.transform.position = new Vector2(4f, upperTree.transform.position.y - treeHole - 2f* Random.value);
     }
 }
