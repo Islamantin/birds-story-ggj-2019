@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: e01c718c302d5e94fac88368e9247b9a
+guid: 29b202ad2a97eb248bb2712f5f852e60
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Bird fly_0
-    21300002: Bird fly_1
-    21300004: Bird fly_2
-    21300006: Bird fly_3
+    21300000: Bird blink_0
+    21300002: Bird blink_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -49,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,17 +82,28 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bird fly_0
+      name: Bird blink_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 30
-        width: 22
-        height: 25
+        x: 0
+        y: 0
+        width: 21
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b6be68efa8af844eab2f03a6156df07
+      spriteID: b049b716d8ace9a4cb4d4463559b5891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird fly_1
+      name: Bird blink_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 6
-        width: 22
-        height: 25
+        x: 19
+        y: 16
+        width: 21
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f225b21a11f4ca34f86b9b6f9c8d09af
+      spriteID: 3c773829af974bd488a094f97ddd1e86
       vertices: []
       indices: 
       edges: []
@@ -130,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f96ea833781f6c44b96179c2278f93f1
+    spriteID: 379ded52024676a41a8d28bdba47fc42
     vertices: []
     indices: 
     edges: []
