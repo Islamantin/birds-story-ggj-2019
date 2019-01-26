@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementBird : MonoBehaviour
+public class PipeEngine : MonoBehaviour
 {
-    public Animator animator;
+    public Vector2 pipeVelocity = new Vector2();
 
     // Start is called before the first frame update
     void Start()
     {
-
+        GetComponent<Rigidbody2D>().velocity = pipeVelocity;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(transform.position.x < -8)
         {
-            animator.SetBool("Space", true);
+            Destroy(gameObject);
         }
-        if(Input.GetKeyUp(KeyCode.Space))
-        animator.SetBool("Space", false);
     }
 }
