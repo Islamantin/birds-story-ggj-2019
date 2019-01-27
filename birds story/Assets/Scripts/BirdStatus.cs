@@ -6,9 +6,11 @@ public class BirdStatus : MonoBehaviour
 {
 
     public SpriteRenderer rendererToFade;
+    public GameObject stickObject;
+
     public float maxStamina;
 
-    public bool HasBranch { get; private set; }
+    public bool HasStick { get; private set; }
     public float CurrentStamina { get; private set; }
 
 
@@ -32,5 +34,11 @@ public class BirdStatus : MonoBehaviour
         var value = CurrentStamina / maxStamina;
         var c = rendererToFade.color;
         rendererToFade.color = new Color (c.r, c.g, c.b, value);
+    }
+
+    public void SetStickStatus(bool stickStatus)
+    {
+        HasStick = stickStatus;
+        stickObject.SetActive(stickStatus);
     }
 }
