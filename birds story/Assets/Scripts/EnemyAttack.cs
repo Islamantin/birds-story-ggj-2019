@@ -16,6 +16,8 @@ public class EnemyAttack : MonoBehaviour
     private Rigidbody2D rb2;
     public float boostSpeed = 10f;
 
+    public float power = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,7 @@ public class EnemyAttack : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(player.transform.position);
+        //Debug.Log(player.transform.position);
 
         time -= Time.deltaTime;
 
@@ -60,7 +62,7 @@ public class EnemyAttack : MonoBehaviour
         Debug.Log("kek");
         if (collision.collider.CompareTag("bird"))
         {
-            collision.collider.GetComponent<Rigidbody2D>().AddForce(collision.contacts[0].normal * 10f);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * power, ForceMode2D.Impulse);
         }
     }
 }
