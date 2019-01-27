@@ -54,4 +54,13 @@ public class EnemyAttack : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("kek");
+        if (collision.collider.CompareTag("bird"))
+        {
+            collision.collider.GetComponent<Rigidbody2D>().AddForce(collision.contacts[0].normal * 10f);
+        }
+    }
 }

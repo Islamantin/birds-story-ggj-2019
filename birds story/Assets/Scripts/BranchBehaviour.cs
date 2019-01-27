@@ -7,7 +7,7 @@ public class BranchBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up*10);
     }
 
     // Update is called once per frame
@@ -17,9 +17,15 @@ public class BranchBehaviour : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "bird")
+        switch (collider.tag)
         {
-            Destroy(collider);
+            case "bird":
+                collider.GetComponent<BirdStatus>().AddStamina(50);
+                Destroy(gameObject);
+                break;
+            case "dead":
+                Destroy(gameObject);
+                break;
         }
     }
 }
