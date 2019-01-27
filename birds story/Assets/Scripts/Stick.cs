@@ -25,8 +25,7 @@ public class Stick : MonoBehaviour
                 {
                     status.SetStickStatus(true);
                     Destroy(gameObject);
-                }
-                //AddStamina(50)                
+                }      
                 break;
             case "dead":
                 Destroy(gameObject);

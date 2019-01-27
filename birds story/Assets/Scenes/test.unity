@@ -876,7 +876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &459257391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2648,6 +2648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747142968}
   - component: {fileID: 1747142967}
+  - component: {fileID: 1747142969}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -2674,6 +2675,8 @@ MonoBehaviour:
   rightBorder: 7.5
   topBorder: 4
   downBorder: 2
+  minTime: 120
+  maxTime: 600
 --- !u!4 &1747142968
 Transform:
   m_ObjectHideFlags: 0
@@ -2688,6 +2691,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747142969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747142966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b465f0d29bb77714bb55365bacb21164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 277534074165682027, guid: 11b925f7ecd72234f928fb35e9b9d3d5, type: 3}
+  leftBorder: -7.5
+  rightBorder: 7.5
+  topBorder: 2
+  downBorder: -4
+  minTime: 60
+  maxTime: 300
 --- !u!1 &1988089023
 GameObject:
   m_ObjectHideFlags: 0

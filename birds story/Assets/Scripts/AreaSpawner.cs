@@ -10,6 +10,8 @@ public class AreaSpawner : MonoBehaviour
     public float rightBorder;
     public float topBorder;
     public float downBorder;
+    public float minTime = 120f;
+    public float maxTime = 600f;
     float counter;
     // Start is called before the first frame update
     void Start()
