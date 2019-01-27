@@ -19,7 +19,6 @@ public class BranchBehaviour : MonoBehaviour
     {
         if(collider.tag == "bird")
         {
-            //collider.OnBranchContact();
             Destroy(collider);
         }
     }

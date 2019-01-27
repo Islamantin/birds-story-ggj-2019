@@ -41,12 +41,12 @@ public class BranchSpawner : MonoBehaviour
         GameObject branch_instance = Instantiate(branch);
 
         branch.transform.position = new Vector2(Random.Range(leftBorder,-2f),topBorder);
-        Debug.Log("left");
+        //Debug.Log("left");
     }
     void SpawnRight()
     {
         GameObject branch_instance = Instantiate(branch);
-        Debug.Log("right");
+        //Debug.Log("right");
         branch.transform.position = new Vector2(Random.Range(2f,rightBorder), topBorder);
     }
 }
