@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdStatus : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class BirdStatus : MonoBehaviour
     public GameObject stickObject;
 
     public float maxStamina;
+
+    public int score = 0;
+    public int addScore = 1;
 
     public bool HasStick { get; private set; }
     public float CurrentStamina { get; private set; }
@@ -40,5 +44,15 @@ public class BirdStatus : MonoBehaviour
     {
         HasStick = stickStatus;
         stickObject.SetActive(stickStatus);
+    }
+
+    public void AddScoreToBird(int score_added)
+    {
+        score += score_added;
+
+        if(score >= 8)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
