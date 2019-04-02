@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
 
     public GameObject enemy;
@@ -16,21 +16,25 @@ public class EnemyController : MonoBehaviour
 
     private BoxCollider2D coll;
 
-    private bool lookingTarget;
+    private bool started;
 
-    // Start is called before the first frame update
     void Start()
     {
-        lookingTarget = true;
         time = timer;
         coll = GetComponent<BoxCollider2D>();
     }
 
     private Transform pos;
 
-    // Update is called once per frame
+    public void StartTimer()
+    {
+        started = true;
+    }
+
     void Update()
     {
+        if (!started)
+            return;
         if (time < 0)
         {
             time = timer;
@@ -50,22 +54,7 @@ public class EnemyController : MonoBehaviour
 
                 enemyBird.GetComponent<EnemyAttack>().inverse = true;
             }
-
-            Attack(enemyBird);
         }
         time -= Time.deltaTime * diff;
-    }
-
-    void Moving(GameObject enemy)
-    {
-
-    }
-
-    void Attack(GameObject enemy)
-    {
-        if (lookingTarget)
-        {
-            
-        }
     }
 }

@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 188599930}
-  jumpForce: {x: 1, y: 2}
+  jumpForce: {x: 1.5, y: 2}
   jumpPower: 100
   transformToFlip: {fileID: 188599929}
   status: {fileID: 188599934}
@@ -448,7 +448,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188599927}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

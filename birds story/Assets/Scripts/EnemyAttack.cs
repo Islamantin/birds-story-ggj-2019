@@ -59,7 +59,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("kek");
+        //Debug.Log("kek");
         if (collision.collider.CompareTag("bird"))
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * power, ForceMode2D.Impulse);
