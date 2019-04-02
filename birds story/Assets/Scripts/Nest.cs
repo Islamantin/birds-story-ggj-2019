@@ -30,6 +30,8 @@ public class Nest : MonoBehaviour
             {
                 status.SetStickStatus(false);
                 elements[currentInd++].SetActive(true);
+
+                status.AddScoreToBird(1);
             }
         }
     }
